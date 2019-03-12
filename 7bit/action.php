@@ -73,6 +73,11 @@ if(isset($_GET['inverse'])){
         foreach($birth_arr as $n){        
             echo "<div class=\"row\">";
             $bin = decbin($n + 48);
+            $color = "white";
+            if($b==0){
+                $color = "black";
+            }
+            echo "<div class=\"box $color\"><div class=\"inner\">0</div></div>";
             foreach(str_split($bin) as $a){
                 $color = "white";
                 if($a==$b){
