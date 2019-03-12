@@ -8,8 +8,14 @@
 </head>
 <body>
     <h2>List of Application</h2>
+    <h4>Public App</h4>
     <ul>
-        <li><a href="syntax-highlight">Syntax Highlight</a></li>
+        <li><a href="syntax-highlight">Syntax Highlight</a></li>        
+    </ul>
+    <br>
+    <h4>Private App</h4>
+    <ul>        
+        <li><a href="7bit">Convert Birth date to 7-bit format</a></li>
     </ul>
 </body>
 </html>
