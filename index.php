@@ -18,6 +18,7 @@
         <li><a href="7bit">Convert Birth date to 7-bit format</a></li>
         <li><a href="bit-to-ascii">Convert 7-bit to ASCII format</a></li>
         <li><a href="simple-checksum">Simple Checksum</a></li>
+        <li><a href="main-task">Main Task (Parity, BCC, CRC)</a></li>
     </ul>
 </body>
 </html>
