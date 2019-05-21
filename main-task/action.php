@@ -13,12 +13,20 @@
     $data = $_POST['data'];
     $type = $_POST['type_generator'];
 
-    if($type == "odd"){
+    if($type == "parity-odd"){
         require("parity.php");
         getBit($data, 1);
     }
-    else if($type == "even"){
+    else if($type == "parity-even"){
         require("parity.php");
+        getBit($data, 0);
+    }
+    else if($type == "bcc-odd"){
+        require("bcc.php");
+        getBit($data, 1);
+    }
+    else if($type == "bcc-even"){
+        require("bcc.php");
         getBit($data, 0);
     }
 ?>

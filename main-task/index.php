@@ -15,9 +15,10 @@
         <br><br>
         Jenis:&nbsp;
         <select name="type_generator">
-            <option value="odd">Parity Odd</option>
-            <option value="even">Parity Even</option>
-            <option value="bcc">BCC</option>
+            <option value="parity-odd">Parity Odd</option>
+            <option value="parity-even">Parity Even</option>
+            <option value="bcc-odd">BCC Odd</option>
+            <option value="bcc-even">BCC Even</option>
             <option value="crc">CRC</option>
         </select><br><br>        
         <input type="submit" value="Submit">
