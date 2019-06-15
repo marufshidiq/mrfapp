@@ -31,27 +31,56 @@
             return;
         }
         // </Section>
-        
+
+        $buffer = array();
         $valid = true;
-        foreach(array_chunk($bit_array, 8) as $arr){
+        for($i = 0; $i<8;$i++){
+            $buffer[$i] = 0;
+        }
+        
+        $data = 1;
+        $len = $count/8;
+        foreach(array_chunk($bit_array, 8) as $arr){            
             $ch = "";
             $i = 0;
             foreach($arr as $k => $a){
-                if($a == 1)$i++;                                
+                if($a == 1){
+                    $i++;
+                    $buffer[$k] += 1;
+                }
                 if($k != 7) $ch .= $a;
                 echo $a;
-            }
-            if($i%2 == $parity){
-                echo " $i $ch Sesuai ";
-                echo chr(bindec($ch));
+            }            
+            if($data != $len){
+                if($i%2 == $parity){
+                    echo " $i $ch Sesuai ";
+                    echo chr(bindec($ch));
+                }
+                else {
+                    $valid = false;
+                    echo " $i $ch Tidak sesuai";
+                }
             }
             else {
-                echo " $i $ch Tidak sesuai";
-                $valid = false;
-            }           
-            echo "<br>";
+                echo " Parity";
+            }
+            echo "</br>";
+            $data++;
         }
 
+        for($i = 0; $i<8;$i++){
+            if($buffer[$i]%2 == $parity){
+                echo "<text style=\"color:blue;\">";
+            }
+            else {
+                $valid = false;
+                echo "<text style=\"color:red;\">";
+            }
+            echo $buffer[$i];
+            echo "</text>";
+        }
+
+        echo "</br>";
         echo "</br>";
         if($valid){
             echo "Data yang diterima valid";
