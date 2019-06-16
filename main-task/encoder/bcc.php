@@ -5,6 +5,7 @@ function getBit($data, $parity){
     echo "Data : ";
     echo $data;
     echo "<br>";
+    $ret = "";
     
     $bcc = array();
     for($b = 0; $b < 8; $b++){
@@ -21,6 +22,7 @@ function getBit($data, $parity){
         echo "<td style=\"padding:0px !important;\">";
         if($dec <= 63){
             echo "0";
+            $ret .= "0";
         }
         $k = 0;
         foreach(str_split($bin) as $a){
@@ -29,15 +31,18 @@ function getBit($data, $parity){
                 $bcc[$k] += 1;
             }
             echo $a;
+            $ret .= $a;
             $k++;
         }
         echo "<text style=\"color:red;\">";
         if($j%2 == $parity){
             echo "0";
+            $ret .= "0";
         }
         else {
             echo "1";
             $bcc[7] += 1;
+            $ret .= "1";
         }           
         echo "</text>";        
         echo "</td>"; 
@@ -47,9 +52,11 @@ function getBit($data, $parity){
     foreach($bcc as $b){        
         if($b%2 == $parity){
             echo "0";
+            $ret .= "0";
         }
         else {
             echo "1";            
+            $ret .= "1";
         }  
     }
     echo "</text></td>"; 
@@ -58,6 +65,7 @@ function getBit($data, $parity){
         echo "<td style=\"text-align:center;padding:0px !important;\">$n</td>";
     }
     echo "</tr>";
-    echo "</table>";        
+    echo "</table>";  
+    return $ret;      
 }
 ?>

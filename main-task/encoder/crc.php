@@ -70,5 +70,6 @@
         echo "Remainder : ".$remainder;
         echo "<br>";
         echo "Bit yang dikirimkan : ".$buffer.$remainder;
+        return $buffer.$remainder;
     }
 ?>
