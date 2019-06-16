@@ -1,28 +1,43 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Encoder
-        </title>
-    </head>
-    <body>
+<html lang="en">
 
-        <h2>Encoder (Parity Odd, Parity Even, BCC, CRC)</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transmitter - Komunikasi Data</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
 
-        <form action="action.php" method="post">
-        Data yang akan dikirim:&nbsp;
-        <input type="text" name="data" >
-        <br><br>
-        Jenis:&nbsp;
-        <select name="type_generator">
-            <option value="parity-odd">Parity Odd</option>
-            <option value="parity-even">Parity Even</option>
-            <option value="bcc-odd">BCC Odd</option>
-            <option value="bcc-even">BCC Even</option>
-            <option value="crc">CRC</option>
-        </select><br><br>        
-        <input type="submit" value="Submit">
-        </form> 
+<body>
+    <form action="action.php" method="post">
+        <h1 style="margin-top:20px;">Transmitter</h1>
+        <fieldset>
+            <legend><span class="number">1</span> Masukkan data yang akan dikirim</legend>
+            <label for="data">Data:</label>
+            <input type="text" id="data" name="data">
+        </fieldset>
 
-    </body>
+        <fieldset>
+            <legend><span class="number">2</span> Pilih jenis generator yang digunakan</legend>
+            <label for="type_generator">Generator</label>
+            <select id="type_generator" name="type_generator">
+                <optgroup label="Parity">
+                    <option value="parity-odd">Odd</option>
+                    <option value="parity-even">Even</option>
+                </optgroup>
+                <optgroup label="BCC">
+                    <option value="bcc-odd">Odd</option>
+                    <option value="bcc-even">Even</option>
+                </optgroup>                
+                <optgroup label="CRC">
+                    <option value="crc">CRC - 110101</option>                    
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <button type="submit">Encode</button>
+    </form>
+</body>
+
 </html>

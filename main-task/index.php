@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Generator
-        </title>
-    </head>
-    <body>
+<html lang="en">
 
-        <h2>Komunikasi Data (Parity Odd, Parity Even, BCC, CRC)</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Komunikasi Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <a href="encoder">Encoder</a>
-        <br>
-        <a href="decoder">Decoder</a>
+<body>
+    <form>
+        <h1 style="margin-top:20px;">Tugas Komunikasi Data</h1>
+        <button type="button" onclick="location.href='encoder'">Transmitter</button>
+        <button type="button" onclick="location.href='decoder'">Receiver</button>
+    </form>
+</body>
 
-    </body>
 </html>
