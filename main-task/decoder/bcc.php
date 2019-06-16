@@ -1,5 +1,7 @@
 <?php
     function getData($bit, $parity){
+        $name = $parity==1?"Odd":"Even";
+        echo "<h3>BCC $name</h3>";
         echo $bit;
         $bit_array = str_split($bit); // Merubah bit yang diterima ke dalam array
 

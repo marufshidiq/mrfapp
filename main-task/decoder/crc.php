@@ -45,6 +45,7 @@
     }
     function getData($bit, $divider)
     {
+        echo "<h3>Cyclic Redundancy Check</h3>";
         echo $bit;
         $bit_array = str_split($bit); // Merubah bit yang diterima ke dalam array
 
