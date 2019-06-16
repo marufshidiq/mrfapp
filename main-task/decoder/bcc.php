@@ -1,14 +1,15 @@
 <?php
     function getData($bit, $parity){
-        $name = $parity==1?"Odd":"Even";
-        echo "<h3>BCC $name</h3>";
+        $name = $parity==1?"Odd":"Even";        
+        echo "<h1 style='margin-top:20px;'>BCC $name</h1>";
         echo $bit;
+        $data_text = "";
         $bit_array = str_split($bit); // Merubah bit yang diterima ke dalam array
 
         // <Section> Validasi apakah jumlah bit diterima valid (kelipatan 8)
         $count = count($bit_array); // Mendapatkan jumlah bit yang diterima
         echo "<br>";
-        echo $count;
+        echo "Jumlah bit diterima : ".$count;
         if($count%8 != 0){
             echo "<br>";
             echo "Jumlah bit tidak valid";
@@ -55,8 +56,9 @@
             }            
             if($data != $len){
                 if($i%2 == $parity){
-                    echo " $i $ch Sesuai ";
+                    echo " $i $ch Sesuai ➜ ";
                     echo chr(bindec($ch));
+                    $data_text .= chr(bindec($ch));
                 }
                 else {
                     $valid = false;
@@ -85,7 +87,7 @@
         echo "</br>";
         echo "</br>";
         if($valid){
-            echo "Data yang diterima valid";
+            echo "Data yang diterima valid ➜ ".$data_text;
         }
         else {
             echo "Data yang diterima tidak valid";

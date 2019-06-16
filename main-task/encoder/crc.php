@@ -46,8 +46,8 @@
         return $tmp;
     }
 
-    function getBit($data, $divider){
-        echo "<h3>Cyclic Redundancy Check</h3>";
+    function getBit($data, $divider){        
+        echo "<h1 style='margin-top:20px;'>Cyclic Redundancy Check</h1>";
         echo "Data : ".$data;
         echo "<br>";
         $data_arr = str_split($data);        

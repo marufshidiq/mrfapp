@@ -44,15 +44,15 @@
         return $tmp;
     }
     function getData($bit, $divider)
-    {
-        echo "<h3>Cyclic Redundancy Check</h3>";
+    {        
+        echo "<h1 style='margin-top:20px;'>Cyclic Redundancy Check</h1>";
         echo $bit;
         $bit_array = str_split($bit); // Merubah bit yang diterima ke dalam array
 
         // <Section> Validasi apakah jumlah bit diterima valid (kelipatan 8)
         $count = count($bit_array); // Mendapatkan jumlah bit yang diterima
         echo "<br>";
-        echo $count;
+        echo "Jumlah bit diterima : ".$count;
         $divider_length = strlen($divider);
         if ((($count % 7)) != $divider_length - 1) {
             echo "<br>";
@@ -96,7 +96,7 @@
         
         echo "Dataword : ".$dataword;
         echo "<br>";
-        echo "Data : ";
+        echo "Data : <b>";
 
         foreach(array_chunk(str_split($dataword), 7) as $arr){
             $ch = "";            
@@ -105,5 +105,6 @@
             }                        
             echo chr(bindec($ch));                        
         }
+        echo "</b>";
     }
 ?>

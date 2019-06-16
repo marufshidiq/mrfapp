@@ -1,7 +1,7 @@
 <?php
 function getBit($data, $parity){
-    $name = $parity==1?"Odd":"Even";
-    echo "<h3>BCC $name</h3>";
+    $name = $parity==1?"Odd":"Even";    
+    echo "<h1 style='margin-top:20px;'>BCC $name</h1>";
     echo "Data : ";
     echo $data;
     echo "<br>";
