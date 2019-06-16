@@ -27,7 +27,7 @@
 
         echo "<br>";
         if($other_bit == 1){
-            echo "Ada yang selain 0 dan 1";
+            echo "Ada data selain 0 dan 1";
             return;
         }
         // </Section>
