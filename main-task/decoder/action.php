@@ -29,6 +29,10 @@
         require("bcc.php");
         getData($bit, 0);
     }
+    else if($type == "crc"){
+        require("crc.php");
+        getData($bit, "110101");
+    }
 ?>
 </body>
 </html>
