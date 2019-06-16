@@ -6,9 +6,10 @@
             font-family: Consolas;
         }
     </style>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    
+    <form style="padding-bottom:40px;margin-bottom:40px;">
 <?php
     $bit = $_POST['bit'];
     $type = $_POST['type_generator'];
@@ -34,5 +35,6 @@
         getData($bit, "110101");
     }
 ?>
+    </form>
 </body>
 </html>
